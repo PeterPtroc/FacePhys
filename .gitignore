@@ -1,0 +1,45 @@
+# Local build trees and CMake/Ninja metadata
+/build/
+/native/build/
+CMakeCache.txt
+CMakeFiles/
+CTestTestfile.cmake
+cmake_install.cmake
+build.ninja
+.ninja_deps
+.ninja_log
+compile_commands.json
+Testing/
+
+# Compiled artifacts and runtime bundles
+*.o
+*.obj
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+/native/bin/
+/native/runtime/
+
+# Native capture/test output (the small PPM fixtures in native/tests/data are tracked)
+/native/captures/
+/native/output/
+/native/logs/
+/native/*.csv
+
+# Python and editor-local files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+
+# Local deployment credentials and machine-specific overrides
+.env
+.env.*
+*.local.json

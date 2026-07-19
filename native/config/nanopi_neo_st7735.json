@@ -1,0 +1,54 @@
+{
+  "models": {
+    "main": "../../models/model.tflite",
+    "state": "../../models/state.gz",
+    "sqi": "../../models/sqi_model.tflite",
+    "psd": "../../models/psd_model.tflite",
+    "face_detector": "../../models/blaze_face_short_range.tflite"
+  },
+  "camera": {
+    "backend": "openmv_serial",
+    "device": "/dev/openmv",
+    "width": 320,
+    "height": 240,
+    "fps": 15,
+    "pixel_format": "MJPEG",
+    "serial_timeout_ms": 1000,
+    "max_frame_bytes": 262144,
+    "fixed_roi": null
+  },
+  "inference": {
+    "main_threads": 4,
+    "enable_xnnpack": true,
+    "target_fps": 15,
+    "face_detection_interval_ms": 1000
+  },
+  "signal": {
+    "window_samples": 450,
+    "sqi_interval_ms": 1000,
+    "psd_interval_ms": 1000,
+    "sqi_threads": 1,
+    "psd_threads": 1
+  },
+  "display": {
+    "enabled": true,
+    "driver": "st7735",
+    "spi_device": "/dev/spidev0.0",
+    "spi_speed_hz": 8000000,
+    "width": 128,
+    "height": 160,
+    "rotation": 1,
+    "x_offset": 0,
+    "y_offset": 0,
+    "bgr": true,
+    "invert": false,
+    "tab": "green_tab",
+    "dc_gpiochip": "/dev/gpiochip0",
+    "dc_gpio_line": 203,
+    "dc_gpio_number": 203,
+    "reset_gpiochip": "/dev/gpiochip0",
+    "reset_gpio_line": 6,
+    "reset_gpio_number": 6,
+    "display_interval_ms": 100
+  }
+}
